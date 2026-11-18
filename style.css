@@ -1,0 +1,241 @@
+/* IRP LMS - Home page styles */
+
+:root {
+  --color-primary-navy: #003366;
+  --color-primary-orange: #fe781e;
+  --color-secondary-blue: #5f9fe0;
+  --color-bg-light: #e2f2fd;
+  --color-card-bg: #ffffff;
+  --color-border-light: #d6e9ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-primary-navy);
+  background: var(--color-card-bg);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- navbar (sticky at the top) ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-card-bg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.logo span {
+  font-weight: normal;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a.active {
+  color: var(--color-primary-orange);
+  border-bottom-color: var(--color-primary-orange);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-primary-orange);
+  color: var(--color-primary-orange);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-primary-orange);
+  color: var(--color-card-bg);
+  padding: 11px 22px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #e5660f;
+}
+
+/* ---------- hero ---------- */
+.hero {
+  background: var(--color-bg-light);
+  padding: 50px 0;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1.3;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.kicker {
+  color: var(--color-primary-orange);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.orange {
+  color: var(--color-primary-orange);
+}
+
+.hero p {
+  color: var(--color-secondary-blue);
+  margin-bottom: 25px;
+}
+
+/* ---------- learning journey ---------- */
+.journey {
+  padding: 50px 0 70px;
+}
+
+.journey h2 {
+  font-size: 28px;
+}
+
+.subtitle {
+  color: var(--color-secondary-blue);
+  font-size: 14px;
+  margin: 5px 0 25px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.step-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  padding: 20px 16px;
+}
+
+.step-number {
+  color: var(--color-primary-orange);
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.step-card h3 {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.step-card p {
+  color: var(--color-secondary-blue);
+  font-size: 13px;
+}
+
+/* ---------- tablet: 769px to 1024px ---------- */
+@media (max-width: 1024px) {
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- mobile: up to 768px ---------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 30px 0;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  /* number on the left, text on the right */
+  .step-card {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 10px;
+  }
+
+  .step-number {
+    grid-row: span 2;
+  }
+}
