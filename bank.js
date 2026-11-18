@@ -28,7 +28,6 @@ function parseAmount(input) {
   }
   return amount;
 }
-}
 
 const testInputs = ["500", " 250 ", "", "abc", null, undefined, "12.5.3"];
 
