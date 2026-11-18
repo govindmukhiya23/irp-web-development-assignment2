@@ -1,5 +1,3 @@
-/* IRP LMS - Home page styles */
-
 :root {
   --color-primary-navy: #003366;
   --color-primary-orange: #fe781e;
@@ -33,7 +31,6 @@ a {
   padding: 0 20px;
 }
 
-/* ---------- navbar (sticky at the top) ---------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -105,7 +102,6 @@ a {
   background: #e5660f;
 }
 
-/* ---------- hero ---------- */
 .hero {
   background: var(--color-bg-light);
   padding: 50px 0;
@@ -154,7 +150,6 @@ a {
   margin-bottom: 25px;
 }
 
-/* ---------- learning journey ---------- */
 .journey {
   padding: 50px 0 70px;
 }
@@ -198,14 +193,12 @@ a {
   font-size: 13px;
 }
 
-/* ---------- tablet: 769px to 1024px ---------- */
 @media (max-width: 1024px) {
   .steps {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* ---------- mobile: up to 768px ---------- */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -228,7 +221,6 @@ a {
     grid-template-columns: 1fr;
   }
 
-  /* number on the left, text on the right */
   .step-card {
     display: grid;
     grid-template-columns: 40px 1fr;
